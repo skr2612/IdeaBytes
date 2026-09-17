@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IdeaBytes Enterprise Service Network</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand"><div class="logo">IB</div><div><h1>IdeaBytes</h1><p>Enterprise Service Network</p></div></div>
+    <button class="nav active" data-screen="dashboard">Dashboard</button>
+    <button class="nav" data-screen="request">Create Request</button>
+    <button class="nav" data-screen="marketplace">Vendor Marketplace</button>
+    <button class="nav" data-screen="tracking">Work Tracking</button>
+    <button class="nav" data-screen="payment">Approval & Payment</button>
+    <button class="nav" data-screen="vendor">Vendor Portal</button>
+    <button class="nav" data-screen="iot">IoT Future Layer</button>
+    <div class="note">Workflow first.<br/>Marketplace second.<br/>IoT third.</div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h2 id="title">Executive Dashboard</h2>
+        <p>Imagine if every service need across India could be requested, matched, executed, verified, and paid on one trusted platform.</p>
+      </div>
+      <button class="primary" data-go="request">+ New Request</button>
+    </header>
+
+    <section id="dashboard" class="screen active">
+      <div class="hero">
+        <div>
+          <span>REAL PROBLEM</span>
+          <h3>Getting work done across distributed locations is still broken.</h3>
+          <p>Requests start in WhatsApp, vendors are found through personal contacts, work progress is invisible, invoices are manual, and payments are delayed.</p>
+        </div>
+        <div class="imagine">
+          <h3>Imagine if we can...</h3>
+          <ul>
+            <li>Connect every need to the right service provider.</li>
+            <li>Track the work in real time.</li>
+            <li>Verify completion before payment.</li>
+            <li>Build India's trusted enterprise service marketplace.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div><label>Open Requests</label><b>148</b><small>32 urgent</small></div>
+        <div><label>Avg Response</label><b>42m</b><small>18% faster</small></div>
+        <div><label>SLA Compliance</label><b>94%</b><small>620 locations</small></div>
+        <div><label>Pending Payments</label><b>₹18.4L</b><small>Awaiting approval</small></div>
+      </div>
+
+      <div class="flow">
+        <div>Create Request</div><span>→</span><div>Match Vendor</div><span>→</span><div>Execute</div><span>→</span><div>Verify</div><span>→</span><div>Pay</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Priority Work Orders</h3>
+          <table>
+            <tr><th>Location</th><th>Issue</th><th>Status</th><th>Vendor</th></tr>
+            <tr><td>Hyderabad Store 024</td><td>HVAC not cooling</td><td><span class="pill orange">In Progress</span></td><td>CoolAir Services</td></tr>
+            <tr><td>Pune Branch 112</td><td>Electrical trip</td><td><span class="pill red">Urgent</span></td><td>Awaiting Match</td></tr>
+            <tr><td>Chennai Warehouse</td><td>Water leakage</td><td><span class="pill green">Completed</span></td><td>RapidFix</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Marketplace Health</h3>
+          <div class="big-number">3,200+</div>
+          <p>Verified vendors across HVAC, electrical, plumbing, fire safety, cleaning, civil, and security services.</p>
+          <div class="bars"><p>HVAC <b style="width:85%"></b></p><p>Electrical <b style="width:72%"></b></p><p>Plumbing <b style="width:64%"></b></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="screen">
+      <div class="card wide">
+        <h3>Create Service Request</h3>
+        <p>For store managers, branch admins, regional operations teams, and facility managers.</p>
+        <div class="form">
+          <label>Location<select><option>Hyderabad Store 024</option><option>Pune Branch 112</option></select></label>
+          <label>Category<select><option>HVAC</option><option>Electrical</option><option>Plumbing</option><option>Fire Safety</option></select></label>
+          <label>Priority<select><option>Normal</option><option>Urgent</option><option>Business Critical</option></select></label>
+          <label>Budget<input value="₹15,000"/></label>
+          <label class="span">Problem Description<textarea>AC not cooling. Customer area temperature is high. Need technician visit today.</textarea></label>
+        </div>
+        <div class="actions"><button class="secondary">Save Draft</button><button class="primary" data-go="marketplace">Find Matching Vendors</button></div>
+      </div>
+    </section>
+
+    <section id="marketplace" class="screen">
+      <div class="headline"><h3>Vendor Marketplace Match</h3><div class="score">92%<span>Best match confidence</span></div></div>
+      <div class="vendors">
+        <div class="vendor recommended"><em>Recommended</em><h3>CoolAir Services Pvt Ltd</h3><p>HVAC specialist · Hyderabad · 18 technicians</p><div>⭐ 4.8 · 96% SLA · 38m response · ₹₹</div><button class="primary" data-go="tracking">Assign Vendor</button></div>
+        <div class="vendor"><h3>Metro Facility Care</h3><p>Multi-service vendor · Hyderabad · 42 technicians</p><div>⭐ 4.5 · 91% SLA · 56m response · ₹₹₹</div><button class="secondary">Request Quote</button></div>
+        <div class="vendor"><h3>RapidFix Technical</h3><p>HVAC & electrical · Telangana · 25 technicians</p><div>⭐ 4.3 · 89% SLA · 1h 12m response · ₹</div><button class="secondary">Request Quote</button></div>
+      </div>
+      <div class="card"><h3>Cost Benchmark</h3><p>Similar HVAC cooling complaints in Hyderabad average <b>₹12,000 – ₹18,500</b>. Quote above ₹22,000 should trigger approval.</p></div>
+    </section>
+
+    <section id="tracking" class="screen">
+      <div class="card wide">
+        <h3>Work Order Tracking</h3>
+        <div class="steps"><div class="done">Request Created<br><small>10:12 AM</small></div><div class="done">Vendor Accepted<br><small>10:18 AM</small></div><div class="done">Technician Dispatched<br><small>10:31 AM</small></div><div class="current">Work In Progress<br><small>11:05 AM</small></div><div>Customer Validation<br><small>Pending</small></div><div>Invoice & Pay<br><small>Pending</small></div></div>
+        <div class="grid"><div class="map">Technician checked in at Hyderabad Store 024</div><div class="card inner"><h3>Field Evidence</h3><div class="evidence"><div>Before Photo</div><div>Work Photo</div><div>Parts Used</div><div>Customer Sign-off</div></div><button class="primary" data-go="payment">Validate Completion</button></div></div>
+      </div>
+    </section>
+
+    <section id="payment" class="screen">
+      <div class="card wide">
+        <h3>Approval & Payment Flow</h3>
+        <div class="invoice"><div><b>Invoice #INV-24091</b><p>CoolAir Services · HVAC repair · Hyderabad Store 024</p></div><strong>₹16,750</strong></div>
+        <div class="steps"><div class="done">Work Verified<br><small>Photo + sign-off</small></div><div class="done">SLA Checked<br><small>Within 4-hour SLA</small></div><div class="current">Manager Approval<br><small>Awaiting approval</small></div><div>Finance Payment<br><small>Pending</small></div></div>
+        <div class="actions"><button class="secondary">Dispute Invoice</button><button class="primary">Approve Payment</button></div>
+      </div>
+    </section>
+
+    <section id="vendor" class="screen">
+      <div class="card wide">
+        <h3>Vendor Portal</h3>
+        <p>Vendors get more work, clear expectations, proof-based closure, and payment visibility.</p>
+        <div class="metrics"><div><label>New Leads</label><b>27</b><small>This week</small></div><div><label>Active Jobs</label><b>14</b><small>6 due today</small></div><div><label>Receivables</label><b>₹7.8L</b><small>Approved/pending</small></div><div><label>Rating</label><b>4.8</b><small>Top 5%</small></div></div>
+      </div>
+    </section>
+
+    <section id="iot" class="screen">
+      <div class="hero">
+        <div><span>ADVANCED CAPABILITY</span><h3>IoT is the intelligence layer, not the entry point.</h3><p>Start with work execution. Once workflows and vendor network are established, connect assets and automate proactive maintenance.</p></div>
+        <div class="imagine"><h3>Imagine if we can...</h3><ul><li>Detect failure before business impact.</li><li>Create a request automatically.</li><li>Dispatch the best vendor.</li><li>Reduce downtime and energy waste.</li></ul></div>
+      </div>
+      <div class="flow"><div>Sensor Signal</div><span>→</span><div>Anomaly</div><span>→</span><div>Auto Request</div><span>→</span><div>Vendor Dispatch</div><span>→</span><div>Predictive Maintenance</div></div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
